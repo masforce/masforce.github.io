@@ -5,66 +5,130 @@
 	<meta name="author" content=" Mason Force" >
 	<meta name="description" content="Mason's Personal Webpage">
 	<meta name="keywords" content="Mason,CSS,Colorado,JavaScript,Computer">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <title>Mason Force Local</title>
-	<link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="http://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+    <title>Mason Force</title>
+	<link rel="stylesheet" type="text/css" href="./resume.css">
 </head>
-
+    
 <body>
-    
-	<div class="topstripe">Colorado State University | Mason Force</div>
-    	
-		<header>
-            <h1>Welcome to Mason Force Home</h1>
-		</header>    	
-    <div class="topstripe"></div>
-    
-    <div id="wrapper">
-    
-        <div id="content">
-            <div id="main">
-                <div id="pictures">
-                    <class id="picColumn">
-                        <img src="pictures/MasonMorganMaddox.jpg"  alt ="Mason and his brothers.">
-                        <div id="imageCaption1">Mason and his brothers</div>
-                    </class>
-                    <class id="picColumn">
-                        <img src="pictures/RomeProfilePic.jpg" alt="Mason in Rome">
-                        <div id="imageCaption2">Mason in Rome</div>
-                    </class>
-                    <class id="picColumn">
-                        <img src="pictures/MunichProfilePic.JPEG" alt="Mason in Munich">
-                        <div id="imageCaption3">Mason in Munich</div>
-                    </class>
-                </div>
-                
-                <h1>Greetings! Welcome to my humble website.</h1>
-                
-                <div id="info">
-
-                    <h2>A Brief Introduction:</h2>
-                    <p> I was born in the glorious year of nineteen-hundred and nintey-seven, on the brisk Fall day of the tenth of September.  I was an inquisitive child, and to my good fortune begotten to such parents who would encourage such behavior.  My early days I spent in the fine land of Texas, situated in the center of our good nation and blessed with the finest Mexican food ever to grace my Mother's dishware. Such times were undoubtedly of paramount importance to the state of my current mental well-being, and I look back on those days of the early twenty-first century with immeasurable fondness.<br></p>
-                    <p>At the present, I enjoy a comfortable lifestyle in the great city of Fort Collins, Colorado. Having dedicated myself to my studies and the worthy pursuit of higher education, I spend a significant portion of my time at the respectable institution of Colorado State University, wherein I am enrolled as a pupil. It is my hope to pursue a future based upon the remarkable computing technologies of our modern age.  Furthermore, I aspire to traverse the globe in order to increase my understanding of the curious cultures found throughout its many divisions.<br></p>
-                    <p>I cordially invite you, traverser of the web, to explore this site with unbrideled enthusiasm.</p>
-
-                </div>
-                
-            </div>
-            <div id="sidebar">
-                <h3>Change the style of this page:</h3>
-                <nav class ="verticalNav">
-                    <ul>
-                        <a href="index.html"><li>Home</li></a>
-                        <a href="east/index.html"><li>East</li></a>
-                        <a href="west/index.html"><li>West</li></a>
-                    </ul>
-                </nav>
-            </div>
-        </div>	
+    <div id="topBar">
+        <nav class="horizontalNav">
+            <ul>
+                <li><a class="active" href="resume.html">Home</a></li>
+                <li><a href="">Experience</a></li>
+                <li><a href="">Activities</a></li>
+            </ul>
+        </nav>
+        <a href="resume.html">
+        <div id="logo">
+            <p>forcemason.com</p>
+        </div></a>
     </div>
+    
+    
+    <div class="wrapper">
         
-	<div class="topstripe">2019</div>
-	
+        <div id="introBox">
+            <img class="profile" src="pictures/RomeProfilePic.jpg">
+            <br>
+            <h1>Hi. I'm Mason Force.</h1>
+            <br>
+            <div id="socialMedia">
+                
+                <div class="icon"><a href="https://www.facebook.com/mason.force.5"><img src="pictures/facebook.png"></a></div>
+                    
+                <div class="icon"><a href="https://www.instagram.com/masforce/?hl=en"><img src="pictures/instagram.png"></a></div>
+                    
+                <div class="icon"><a href="https://www.linkedin.com/in/mason-force/"><img src="pictures/linkedin-logo.png"></a></div>
+                
+                <div class="icon"><a href="https://github.com/masforce"><img src="pictures/github-sign.png"></a></div>
+                
+            </div>
+            
+        </div>
+        
+        <div id="columns">
+            
+            <div id="about">
+                
+                <h3>A Brief Introduction</h3>
+        
+                <p> I'm a social computer scientist with a passion for creativity and trying new things.<br></p>
+                <p>I go to Colorado State University in Fort Collins, Colorado, where I'm working on my bachelor's degree.  Recently, I've been doing a lot of work with font-end web development, but I have  experience writing code for both the client and server-side of applications.<br></p>
+                <p>This is my homepage!  Have a look around, and thanks for visiting.</p>
+                
+                <h4>-Mason</h4>
+                
+            </div>
+            
+            <div id="facts">
+                <h3>Here are the facts:</h3>
+                <table class="facts">
+                    <tr>
+                        <th>Address:</th>
+                        <td>901 Constitution Ave, Fort Collins, CO</td>
+                    </tr>
+                    <tr>
+                        <th>Major:</th>
+                        <td>Applied Computing Technology</td>
+                    </tr>
+                    <tr>
+                        <th>University:</th>
+                        <td>Colorado State University</td>
+                    </tr>
+                    <tr>
+                        <th>Year:</th>
+                        <td>Junior (graduating May 2020)</td>
+                    </tr>
+                    <tr>
+                        <th>Age:</th>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <th>Height:</th>
+                        <td>5'6"</td>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    <div id="wrapper2">
+        <div id="columns2">
+            <div id="experience">
+                <h3>Job Experience</h3>
+                <div id="job">
+                    <img class="OWF" src="pictures/OWF-Logo.png">
+                    <p><a href="http://openwaterfoundation.org/">The Open Water Foundation</a> (320 E. Vine Drive, Suite 203 / Fort Collins, CO 80524)</p>
+                    <p><strong>Position:</strong> Intern Web Developer</p>  
+                    <p>Sep. 2018 to present</p>
+                    <div id="description">
+                        <p>Open Water Foundation provides open-source software to help customers make better decisions about water.  As an intern, I analyze bulk water resource management data from sources throughout Colorado and build custom, online visualizations to aid our customers in their decision-making process.  I present the data in a manner that is readable, understandable and informative.  In addition, I consistently research and experiment with new methods to make these visualizations more interactive and dynamic, as well as develop my own skills.  The positions also entails maintaining detailed documentation on Github and developing examples used for both company records and training future employees.
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div id="job">
+                    <img class="warner" src="pictures/warner.jpeg">
+                    <p><a href="http://openwaterfoundation.org/">Colorado State University Warner College of Natural Resources PC Lab</a> (232 Natural Resources, Fort Collins, CO)</p>
+                    <p><strong>Position:</strong> Lab Tech</p>  
+                    <p>Aug. 2017 to Jan. 2019</p>
+                    <div id="description">
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div id="experiencePhoto">
+                
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer">
+        <p>Mason Force 2019 v1.0</p>
+    </div>
 </body>
-
-</html>
