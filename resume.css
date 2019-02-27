@@ -3,7 +3,7 @@ img {
 }
 .wrapper {
     width: 90%;
-    margin-top: 120px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0px;
@@ -95,11 +95,21 @@ nav.horizontalNav ul li:hover {
     text-align: center;
     display: block;
     width: 100%;
-    background-color: grey;
+    background-image: url(pictures/profile_Ireland2.jpg);
+    background-size: 1300px;
+    background-position: center;
+    background-repeat: no-repeat;
     color: black;
+    background-color: grey;
+}
+
+#introContent {
+    width: 100%;
+    padding-top: 480px;
+    padding-bottom: 20px;
 }
 h1 {
-    font-size: 70px;
+    font-size: 80px;
     margin-bottom: 10px;
     margin-top: 0;
     color: #ffff;
@@ -118,7 +128,7 @@ h1 {
 #socialMedia {
     margin-left: auto;
     margin-right: auto;
-    width: 650px;
+    width: 40%;
     display: flex;
     
 }
@@ -135,6 +145,7 @@ h1 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    width: 45px;
 }
 
 #socialMedia a img:hover {
