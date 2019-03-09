@@ -5,18 +5,51 @@
 	<meta name="author" content=" Mason Force" >
 	<meta name="description" content="Mason's Personal Webpage">
 	<meta name="keywords" content="Mason,CSS,Colorado,JavaScript,Computer">
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
     <title>Mason Force</title>
 	<link rel="stylesheet" type="text/css" href="./resume.css">
 </head>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+        
+          
+    </script>
+    
 <body>
+    <p class="myAnchor">
+        <a id="top" style="position:absolute; top:-20px;"></a>
+    </p>
     <div id="topBar">
         <nav class="horizontalNav">
-            <ul>
-                <li><a class="active" href="resume.html">Home</a></li>
-                <li><a href="">Experience</a></li>
-                <li><a href="">Activities</a></li>
+            <ul id="mainNav">
+                <li class="active"><a href="#top">Home</a></li>
+                <li><a href="#anchor">Experience</a></li>
+                <li><a href="#activities">Activities</a></li>
             </ul>
         </nav>
         <a href="resume.html">
@@ -38,7 +71,7 @@
 
                     <div class="icon"><a href="https://www.instagram.com/masforce/?hl=en"><img src="pictures/instagramIcon.png"></a></div>
 
-                    <div class="icon"><a href="https://www.linkedin.com/in/mason-force/"><img src="pictures/linkedInIcon.png"></a></div>
+                    <div class="icon"><a href="https://www.linkedin.com/in/mason-force/"><img src="pictures/linkedinIcon.png"></a></div>
 
                     <div class="icon"><a href="https://github.com/masforce"><img src="pictures/githubIcon.png"></a></div>
 
@@ -57,7 +90,7 @@
                 <p>I go to Colorado State University in Fort Collins, Colorado, where I'm working on my bachelor's degree.  Recently, I've been doing a lot of work with font-end web development, but I have  experience writing code for both the client and server-side of applications.<br></p>
                 <p>This is my homepage!  Have a look around, and thanks for visiting.</p>
                 
-                <h4>-Mason</h4>
+                <h4><p>-</p><img src="pictures/signature.png"></h4>
                 
             </div>
             
@@ -93,33 +126,78 @@
             
         </div>
         
+        
     </div>
+    
+    <p class="myAnchor">
+        <a id="anchor" style="position:absolute; top:-50px;"></a>
+    </p>
+    
+    <div id="wrapper3">
+        
+        <div id="subWrapper1">
+            <h3>Job Experience</h3>
+            <div id="job">
+                <img class="OWF" src="pictures/OWF-Logo.png">
+                <p><a href="http://openwaterfoundation.org/">The Open Water Foundation</a> (320 E. Vine Drive, Suite 203 / Fort Collins, CO 80524)</p>
+                <p><strong>Position:</strong> Intern Web Developer</p>  
+                <p>Sep. 2018 to present</p>
+                <div id="description">
+                    <p>Open Water Foundation provides open-source software to help customers make better decisions about water.  As an intern, I analyze bulk water resource management data from sources throughout Colorado and build custom, online visualizations to aid our customers in their decision-making process.  I present the data in a manner that is readable, understandable and informative.  In addition, I consistently research and experiment with new methods to make these visualizations more interactive and dynamic, as well as develop my own skills.  The positions also entails maintaining detailed documentation on Github and developing examples used for both company records and training future employees.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div id="job">
+                <img class="warner" src="pictures/warner.jpeg">
+                <p><a href="http://openwaterfoundation.org/">Colorado State University Warner College of Natural Resources PC Lab</a> (232 Natural Resources, Fort Collins, CO)</p>
+                <p><strong>Position:</strong> Lab Tech</p>  
+                <p>Aug. 2017 to Jan. 2019</p>
+                <div id="description">
+
+                </div>
+            </div>
+        </div>
+        <div id="subWrapper2">
+            <h3>Skills</h3>
+            <div id="skills">
+                <div id="subSkills">
+                    <p>I'm proficient in the following development environments and languages:</p>
+                    <ul class="skillList">
+                        <li class="skill"><img src="pictures/javaIcon.png"><div class="skillItem">Java</div></li>
+                        <li class="skill"><img src="pictures/CIcon.png"><div class="skillItem">C</div></li>
+                        <li class="skill"><img src="pictures/C++Icon.png"><div class="skillItem">C++</div></li>
+                        <li class="skill"><img src="pictures/ReactIcon.png"><div class="skillItem">React</div></li>
+                        <li class="skill"><img src="pictures/PHPIcon.png"><div class="skillItem">PHP</div></li>
+                        <li class="skill"><img src="pictures/HTMLIcon.png"><div class="skillItem">HTML</div></li>
+                        <li class="skill"><img src="pictures/CSSIcon.png"><div class="skillItem">CSS</div></li>
+                        <li class="skill"><img src="pictures/JavascriptIcon.png"><div class="skillItem">JavaScript</div></li>
+                    </ul>
+                </div>
+                <div id="subSkills">
+                    <p>I'm experienced working with:</p>
+                    <ul class="skillList">
+                        <li class="skill"><img src="pictures/SCRUMIcon.jpeg"><div class="skillItem">Agile SCRUM</div></li>
+                        <li class="skill"><img src="pictures/JSONIcon.jpeg"><div class="skillItem">JSON Format</div></li>
+                        <li class="skill"><img src="pictures/testingIcon.png"><div class="skillItem">Testing</div></li>
+                        <li class="skill"><img src="pictures/DebuggingIcon.jpeg"><div class="skillItem">Debugging</div></li>
+                        <li class="skill"><img src="pictures/WritingIcon.png"><div class="skillItem">Technical Writing</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    
+    </div>
+    
+    <p class="myAnchor">
+        <a id="activities" style="position:absolute; top:-20px;"></a>
+    </p>
     
     <div id="wrapper2">
         <div id="columns2">
             <div id="experience">
-                <h3>Job Experience</h3>
-                <div id="job">
-                    <img class="OWF" src="pictures/OWF-Logo.png">
-                    <p><a href="http://openwaterfoundation.org/">The Open Water Foundation</a> (320 E. Vine Drive, Suite 203 / Fort Collins, CO 80524)</p>
-                    <p><strong>Position:</strong> Intern Web Developer</p>  
-                    <p>Sep. 2018 to present</p>
-                    <div id="description">
-                        <p>Open Water Foundation provides open-source software to help customers make better decisions about water.  As an intern, I analyze bulk water resource management data from sources throughout Colorado and build custom, online visualizations to aid our customers in their decision-making process.  I present the data in a manner that is readable, understandable and informative.  In addition, I consistently research and experiment with new methods to make these visualizations more interactive and dynamic, as well as develop my own skills.  The positions also entails maintaining detailed documentation on Github and developing examples used for both company records and training future employees.
-                        </p>
-                    </div>
-                </div>
-                <hr>
-                <div id="job">
-                    <img class="warner" src="pictures/warner.jpeg">
-                    <p><a href="http://openwaterfoundation.org/">Colorado State University Warner College of Natural Resources PC Lab</a> (232 Natural Resources, Fort Collins, CO)</p>
-                    <p><strong>Position:</strong> Lab Tech</p>  
-                    <p>Aug. 2017 to Jan. 2019</p>
-                    <div id="description">
-                        
-                    </div>
-                </div>
-                
+                <h3>This section in development...</h3>
                 
             </div>
             <div id="experiencePhoto">
