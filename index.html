@@ -5,33 +5,130 @@
 	<meta name="author" content=" Mason Force" >
 	<meta name="description" content="Mason's Personal Webpage">
 	<meta name="keywords" content="Mason,CSS,Colorado,JavaScript,Computer">
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
     <title>Mason Force</title>
-	<link rel="stylesheet" type="text/css" href="./resume.css">
+	
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="./siteScript.js"></script>
+    <link rel="stylesheet" type="text/css" href="./resume.css">
+    <link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 885px)' href='./resumeNarrow.css' />
+    
 </head>
     
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="./siteScript.js"></script>
+<script>
     
+    $( document ).ready(function() {
+        //console.log("running");
+        //if ($(window).width() < 870) {
+        //   var logo = document.getElementById("introBox");
+        //    $(logo).prepend("<p style=\"color: white; margin-top: 30px; //font-size: 23px;\">(It's mobile friendly!)</p>");
+        //}
+        //else {
+           
+        //}
+        
+        $(window).scroll(function() {
+            
+           var tophT = $('#top').offset().top,
+               tophH = $('#top').outerHeight(),
+               
+               activitieshT = $('#activities').offset().top,
+               activitieshH = $('#activities').outerHeight(),
+               
+               experiencehT = $('#experience').offset().top,
+               experiencehH = $('#experience').outerHeight(),
+               
+               wH = $(window).height(),
+               wS = $(this).scrollTop();
+            
+            
+           if (wS == 0){
+               
+            $('a[href="#experience"]').css("background-color", "#00ADB5");
+            $('a[href="#top"]').css("background-color", "grey");
+            $('a[href="#activities"]').css("background-color", "#00ADB5");
+           }
+            
+           else if (wS > (activitieshT+activitieshH-(wH/2))){
+               
+            $('a[href="#experience"]').css("background-color", "#00ADB5");
+            $('a[href="#top"]').css("background-color", "#00ADB5");
+            $('a[href="#activities"]').css("background-color", "grey");
+           }
+            
+           else if (wS > (experiencehT+experiencehH-(wH/2))){
+               
+            $('a[href="#experience"]').css("background-color", "grey");
+            $('a[href="#top"]').css("background-color", "#00ADB5");
+            $('a[href="#activities"]').css("background-color", "#00ADB5");
+           }
+            
+           
+            
+            
+            
+        });
+        
+
+    });
+
+</script>
+    
+    
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container-fluid">
+      
+      <a class="navbar-brand" href="#">
+          <p>forcemason.com</p>
+      </a>
+
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+        
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+    </div>
+
+    <div id="navbar" class="navbar-collapse collapse">
+
+      <ul class="nav navbar-nav navbar-left">
+        <li class="nav-item">
+            <a class="nav-link" href="#top">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#activities">Activities</a>
+        </li> 
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>
+
     
 <body>
     <p class="myAnchor">
         <a id="top" style="position:absolute; top:-20px;"></a>
     </p>
-    <div id="topBar">
-        <nav class="horizontalNav">
-            <ul id="mainNav">
-                <li class="active"><a href="#top">Home</a></li>
-                <li><a href="#anchor">Experience</a></li>
-                <li><a href="#activities">Activities</a></li>
-            </ul>
-        </nav>
-        <a href="resume.html">
-        <div id="logo">
-            <p>forcemason.com</p>
-        </div></a>
-    </div>
-    
     
     <div class="wrapper">
         
@@ -45,7 +142,7 @@
 
                     <div class="icon"><a href="https://www.instagram.com/masforce/?hl=en"><img src="pictures/instagramIcon.png"></a></div>
 
-                    <div class="icon"><a href="https://www.linkedin.com/in/mason-force/"><img src="pictures/linkedInIcon.png"></a></div>
+                    <div class="icon"><a href="https://www.linkedin.com/in/mason-force/"><img src="pictures/linkedinIcon.png"></a></div>
 
                     <div class="icon"><a href="https://github.com/masforce"><img src="pictures/githubIcon.png"></a></div>
 
@@ -59,9 +156,9 @@
             <div id="about">
                 
                 <h3>A Brief Introduction</h3>
-        
+                <br>
                 <p> I'm a social computer scientist with a passion for creativity and trying new things.<br></p>
-                <p>I go to Colorado State University in Fort Collins, Colorado, where I'm working on my bachelor's degree.  Recently, I've been doing a lot of work with font-end web development, but I have  experience writing code for both the client and server-side of applications.<br></p>
+                <p>I'm a student Colorado State University in Fort Collins, Colorado, where I'm working on my bachelor's degree.  Recently, I've been doing a lot of work with font-end web development, but I have  experience writing code for both the client and server-side of applications.<br></p>
                 <p>This is my homepage!  Have a look around, and thanks for visiting.</p>
                 
                 <h4><p>-</p><img src="pictures/signature.png"></h4>
@@ -104,7 +201,7 @@
     </div>
     
     <p class="myAnchor">
-        <a id="anchor" style="position:absolute; top:-50px;"></a>
+        <a id="experience"></a>
     </p>
     
     <div id="wrapper3">
@@ -165,13 +262,37 @@
     </div>
     
     <p class="myAnchor">
-        <a id="activities" style="position:absolute; top:-20px;"></a>
+        <a id="activities"></a>
     </p>
     
     <div id="wrapper2">
         <div id="columns2">
-            <div id="experience">
-                <h3>This section in development...</h3>
+            <div id="activities">
+                <div id="subSkills">
+                    <p>I'm proficient in the following development environments and languages:</p>
+                    <ul class="skillList">
+                        <li class="skill"><img src="pictures/javaIcon.png"><div class="skillItem">Java</div></li>
+                        <li class="skill"><img src="pictures/CIcon.png"><div class="skillItem">C</div></li>
+                        <li class="skill"><img src="pictures/C++Icon.png"><div class="skillItem">C++</div></li>
+                        <li class="skill"><img src="pictures/ReactIcon.png"><div class="skillItem">React</div></li>
+                        <li class="skill"><img src="pictures/PHPIcon.png"><div class="skillItem">PHP</div></li>
+                        <li class="skill"><img src="pictures/HTMLIcon.png"><div class="skillItem">HTML</div></li>
+                        <li class="skill"><img src="pictures/CSSIcon.png"><div class="skillItem">CSS</div></li>
+                        <li class="skill"><img src="pictures/JavascriptIcon.png"><div class="skillItem">JavaScript</div></li>
+                    </ul>
+                </div>
+                <div id="subSkills">
+                    <p>I'm experienced working with:</p>
+                    <ul class="skillList">
+                        <li class="skill"><img src="pictures/SCRUMIcon.jpeg"><div class="skillItem">Agile SCRUM</div></li>
+                        <li class="skill"><img src="pictures/JSONIcon.jpeg"><div class="skillItem">JSON Format</div></li>
+                        <li class="skill"><img src="pictures/testingIcon.png"><div class="skillItem">Testing</div></li>
+                        <li class="skill"><img src="pictures/DebuggingIcon.jpeg"><div class="skillItem">Debugging</div></li>
+                        <li class="skill"><img src="pictures/WritingIcon.png"><div class="skillItem">Technical Writing</div></li>
+                    </ul>
+                </div>
+
+                
                 
             </div>
             <div id="experiencePhoto">
