@@ -2,14 +2,19 @@ img {
     display: block;
 }
 .wrapper {
+    background-color: white;
     width: 90%;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0px;
     box-shadow: 0px 0px 3px;
+    
+    
+
 }
 body {
+    position: relative;
     margin: 0;
     padding: 0;
 	width: 100%;
@@ -17,6 +22,101 @@ body {
     background-color: #FFFDF2;
     font-family: 'Nunito Sans', sans-serif;
 }
+
+
+
+
+#backgroundContent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -100;
+
+}
+.background-shape1 {
+    height: 30%;
+    background-color: #FFFDF2;
+    position: relative;
+}
+.background-shape2 {
+    height: 20%;
+    background: #FFFDF2;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+.background-shape2:before {
+    background: inherit;
+    top: 0;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(4.5deg);
+    transform-origin: 100%;
+    z-index: -1;
+}
+.background-shape2:after {
+    background: inherit;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(-1.5deg);
+    transform-origin: 100%;
+    z-index: -1;
+}
+.background-shape3 {
+    height: 30%;
+    background-color: #FFFDF2;
+    position: relative;
+}
+.background-shape4 {
+    height: 20%;
+    background: #FFFDF2;
+    color: #fff;
+    position: relative;
+    bottom: -200px;
+    z-index: 1;
+}
+
+
+.background-shape4:before {
+    background: inherit;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(2.5deg);
+    transform-origin: 100%;
+    z-index: -1;
+}
+
+
+#footer {
+    box-shadow: 0px 0px 3px black;
+    margin-right: auto;
+    margin-left: auto;
+    height: 60px;
+    width: 100%;
+    padding-top: 20px;
+    text-align: center;
+    background-color: #00ADB5;
+}
+#footer p {
+    color: #ffff;
+    font-size: 18px;
+}
+
+
 
 
 
@@ -28,29 +128,40 @@ body {
     box-shadow: 0px 0px 3px;
 }
 .navbar-brand {
-    
-    height:70px;
+    height:100px;
     width: 340px;
     background-color: grey;
     box-shadow: 0px 0px 3px black;
-
-    
     margin-right: 30px;
     color: white !important;
     font-size: 38px;
     position: fixed;
-    top: 0px;
+    top: -30px;
     right: 0;
+    
+    -webkit-transition: transform 1s ease-in-out;
+    -moz-transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
-
+.navbar-brand:focus {
+    background-color: grey !important;
+}
+.navbar-brand:hover {
+    background-color: grey !important;
+    
+    -moz-transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+    -o-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    transform: translateY(30px);
+}
 .navbar-brand p {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    top: 30%;
+    bottom: -60%;
 }
-
 .navbar-toggle {
     margin-left: 10px;
     float: left;
@@ -66,6 +177,7 @@ body {
 }
 .nav-link:hover {
     background-color: grey !important;
+    transition: all ease-in-out .3s;
 }
 
 
@@ -82,13 +194,14 @@ body {
     margin-right: auto;
     text-align: center;
     display: block;
+    
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
 
     background-image: url(pictures/profile_Ireland2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: black;
-    background-color: grey;
 }
 
 #introContent {
@@ -205,17 +318,6 @@ h4 {
     box-shadow: 0px 0px 3px;
 }
 
-#footer {
-    height: 60px;
-    width: 100%;
-    padding-top: 20px;
-    text-align: center;
-    background-color: #00ADB5;
-    box-shadow: 0px 0px 3px;
-}
-#footer p {
-    color: #ffff;
-}
 #columns2 {
     display: flex;
     padding: 0;
@@ -256,15 +358,18 @@ h4 {
     text-align: left;
 }
 
+
+
+
+
 #wrapper3 {
     width: 90%;
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 120px;
+    margin-bottom: 60px;
     display: flex;
 }
-
 #subWrapper1 {
     width: 50%;
     margin-right: 20px;
@@ -279,6 +384,38 @@ h4 {
     box-shadow: 0px 0px 3px;
     padding: 20px;
 }
+#subWrapperWide {
+    margin-top: 60px;
+    width: 100%;
+    margin-right: 20px;
+    background-color: #ffff;
+    box-shadow: 0px 0px 3px;
+    padding: 20px;
+}
+
+
+
+.carousel-inner > .item > .col-md-4 > img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: green;
+}
+.carousel-inner .item > .col-md-4 {
+    padding: 0;
+    border-right-color: white;
+    border-left-color: white;
+    border-right-style: solid;
+    border-left-style: solid;
+}
+
+.col-md-12 {
+    height: 50%;
+    padding: 0;
+}
+
+
 #skills {
     width: 100%;
     display: flex;
@@ -314,4 +451,69 @@ h4 {
     position: relative;
 }
 
+
+
+.project {
+    width: 100%;
+    display: flex;
+}
+.projectImg {
+    width: 50%;
+    padding: 20px;
+}
+.projectImg img {
+    width: 90%;
+    box-shadow: 0px 0px 3px;
+}
+.projectImg a {
+    margin: 0;
+    padding: 0
+}
+.projectImg img:hover {
+    transform: scale(1.05);
+    transition: all ease-in-out .3s;
+}
+.projectDescription {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.projectDescription p {
+    font-size: 18px;
+}
+
+.projectTable {
+    width: 50%;
+    padding: 20px;
+}
+.projectTable .projectTitle {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+#projectFacts {
+    padding: 10px;
+    width: 100%;
+}
+.projectFacts {
+    width: 100%;
+}
+table.projectFacts, td, th {
+    padding: 5px;
+}
+table.projectFacts, td{
+    border-spacing: 10px;
+    text-align: left;
+    font-size: 18px;
+    
+}
+table.projectFacts th {
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    color: #ffff;
+    font-size: 20px;;
+    background-color: #00ADB5;
+}
 
