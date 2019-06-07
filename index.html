@@ -7,7 +7,6 @@
 	<meta name="keywords" content="Mason,CSS,Colorado,JavaScript,Computer">
     <link href="http://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
     <title>Mason Force</title>
-	
     
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -16,87 +15,13 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     
-
     
     <script src="./siteScript.js"></script>
     <link rel="stylesheet" type="text/css" href="./resume.css">
-    <link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 1000px)' href='./resumeNarrow.css' />
     
 </head>
     
-<script>
-    
-    
-    
-    $( document ).ready(function() {
-        
-        $('#sponsorCarousel').carousel({interval: 3900});
 
-        $('.carousel .item').each(function(){
-            
-          var next = $(this).next();
-            
-          if (!next.length) {
-            next = $(this).siblings(':first');
-          }
-            
-          next.children(':first-child').clone().appendTo($(this));
-            
-          if (next.next().length>0) {
-            next.next().children(':first-child').clone().appendTo($(this));
-          }
-            
-          else {
-            $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-          }
-            
-        });
-        
-        
-        
-        
-        
-        $(window).scroll(function() {
-            
-           var tophT = $('#top').offset().top,
-               tophH = $('#top').outerHeight(),
-               
-               activitieshT = $('#activities').offset().top,
-               activitieshH = $('#activities').outerHeight(),
-               
-               experiencehT = $('#experience').offset().top,
-               experiencehH = $('#experience').outerHeight(),
-               
-               wH = $(window).height(),
-               wS = $(this).scrollTop();
-            
-            
-           if (wS == 0){
-               
-            $('a[href="#experience"]').css("background-color", "#00ADB5");
-            $('a[href="#top"]').css("background-color", "grey");
-            $('a[href="#activities"]').css("background-color", "#00ADB5");
-           }
-            
-           else if (wS > (activitieshT+activitieshH-(wH/2))){
-               
-            $('a[href="#experience"]').css("background-color", "#00ADB5");
-            $('a[href="#top"]').css("background-color", "#00ADB5");
-            $('a[href="#activities"]').css("background-color", "grey");
-           }
-            
-           else if (wS > (experiencehT+experiencehH-(wH/2))){
-               
-            $('a[href="#experience"]').css("background-color", "grey");
-            $('a[href="#top"]').css("background-color", "#00ADB5");
-            $('a[href="#activities"]').css("background-color", "#00ADB5");
-           }
-
-        });    
-
-    });
-
-</script>
     
     
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -163,12 +88,17 @@
         <a id="top" style="position:absolute; top:-20px;"></a>
     </p>
     
-    <div class="wrapper">
+    <div id="wrapper">
         
         <div id="introBox">
             <div id="introContent">
                 <h1>Hi. I'm Mason Force.</h1>
                 <br>
+                
+                <div id="downloadOption">
+                    <a href="mason_resume.pdf" download id="downloadButton">Download My Resume</a>
+                </div>
+
                 <div id="socialMedia">
 
                     <div class="icon"><a href="https://www.facebook.com/mason.force.5"><img src="pictures/facebookIcon.png"></a></div>
@@ -293,11 +223,7 @@
         </div>
         
     
-    </div>
-    
-    <p class="myAnchor">
-        <a id="projects"></a>
-    </p>  
+    </div>  
         
     <div class="col-md-12">
         <div class="carousel slide" id="sponsorCarousel">
@@ -335,9 +261,9 @@
           </div>
 
           <!-- Left and right controls -->
-          <a class="left carousel-control" href="#sponsorCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+          <a class="left carousel-control" data-target="#sponsorCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
 
-          <a class="right carousel-control" href="#sponsorCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+          <a class="right carousel-control" data-target="#sponsorCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
         </div>
     </div>
     
@@ -348,7 +274,9 @@
 
         -->
     
-    
+    <p class="myAnchor">
+        <a id="projects"></a>
+    </p>
     
     <div id="wrapper3">
         <div id="subWrapperWide">
