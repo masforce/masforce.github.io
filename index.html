@@ -6,7 +6,7 @@
 	<meta name="author" content=" Mason Force" >
 	<meta name="description" content="Mason's Personal Webpage">
 	<meta name="keywords" content="Mason,CSS,Colorado,JavaScript,Computer">
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
     <title>Mason Force</title>
     
     <!-- Latest compiled and minified CSS -->
@@ -22,18 +22,15 @@
     
 </head>
     
-    <!-- make job experience font larger -->
-    <!-- Add Workday to job experience -->
-    <!-- remove boxes from sub-catagories -->
-    
     
 <nav class="navbar navbar-default navbar-fixed-top">
 
   <div class="container-fluid">
-      
-      <a class="navbar-brand" href="./index.html">
-          <p>forcemason.com</p>
-      </a>
+      <div id="navbar-brand-wrap">
+        <a class="navbar-brand" href="./index.html">
+              <p>forcemason.com</p>
+          </a>
+      </div>
 
     <div class="navbar-header">
 
@@ -68,19 +65,6 @@
 </nav>
     
 <body>
-    
-    <div id="backgroundContent">
-        
-        <div class="background-shape1">
-        </div>
-        <div class="background-shape2">
-        </div>
-        <div class="background-shape3">
-        </div>
-        <div class="background-shape4">
-        </div>
-    
-    </div>
     
     <p class="myAnchor">
         <a id="top" style="position:absolute; top:-20px;"></a>
@@ -147,7 +131,7 @@
                     </tr>
                     <tr>
                         <th>Year:</th>
-                        <td>Junior (graduating May 2020)</td>
+                        <td>Senior (graduating May 2020)</td>
                     </tr>
                     <tr>
                         <th>Age:</th>
@@ -174,6 +158,17 @@
         <div id="subWrapper1">
             <h3>Job Experience</h3>
             <div id="job">
+                <img class="OWF" src="pictures/workday_logo.png">
+                <p><a href="https://www.workday.com/en-us/homepage.html">Workday Inc.</a> (Pleasanton, CA 94588)</p>
+                <p><strong>Position:</strong> Software Development Engineer Intern</p>  
+                <p>June 2019 to Aug. 2019</p>
+                <div id="description">
+                    <p>Workday is a financial and human capital management (HCM) software company.  I spent the summer of 2019 working as an intern with the Business Integrations team, where I wrote Python scripts to visualize service ticket data, developed a tool to optimize AWS server configuration to cut costs and automated error-checking for Github deployment.  I also created from scatch a plugin to provide templates for appointments in Outlook, increasing utilization of a company decision-making framework.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div id="job">
                 <img class="OWF" src="pictures/OWF-Logo.png">
                 <p><a href="http://openwaterfoundation.org/">The Open Water Foundation</a> (320 E. Vine Drive, Suite 203 / Fort Collins, CO 80524)</p>
                 <p><strong>Position:</strong> Intern Web Developer</p>  
@@ -183,44 +178,53 @@
                     </p>
                 </div>
             </div>
-            <hr>
-            <div id="job">
-                <img class="warner" src="pictures/warner.jpeg">
-                <p><a href="http://openwaterfoundation.org/">Colorado State University Warner College of Natural Resources PC Lab</a> (232 Natural Resources, Fort Collins, CO)</p>
-                <p><strong>Position:</strong> Lab Tech</p>  
-                <p>Aug. 2017 to Jan. 2019</p>
-                <div id="description">
-
-                </div>
-            </div>
         </div>
         <div id="subWrapper2">
             <h3>Skills</h3>
+            
+            
+            
             <div id="skills">
-                <div id="subSkills">
-                    <p>I'm proficient in the following development environments and languages:</p>
+
+                <div id="subSkillsHeaders">
+                    <div class="subSkillsHeader">
+                        I'm proficient in the following development environments and languages:
+                    </div>
+                    <div class="subSkillsHeader">
+                        <p>I'm experienced with the following technologies:</p>
+                    </div>
+                </div>
+                
+                <div class="subSkills">
                     <ul class="skillList">
+                        <li class="skill"><img src="pictures/python_logo.png"><div class="skillItem">Python</div></li>
                         <li class="skill"><img src="pictures/javaIcon.png"><div class="skillItem">Java</div></li>
                         <li class="skill"><img src="pictures/CIcon.png"><div class="skillItem">C</div></li>
                         <li class="skill"><img src="pictures/C++Icon.png"><div class="skillItem">C++</div></li>
                         <li class="skill"><img src="pictures/ReactIcon.png"><div class="skillItem">React</div></li>
+                        <li class="skill"><img src="pictures/angular_logo.png"><div class="skillItem">Angular</div></li>
                         <li class="skill"><img src="pictures/PHPIcon.png"><div class="skillItem">PHP</div></li>
                         <li class="skill"><img src="pictures/HTMLIcon.png"><div class="skillItem">HTML</div></li>
                         <li class="skill"><img src="pictures/CSSIcon.png"><div class="skillItem">CSS</div></li>
                         <li class="skill"><img src="pictures/JavascriptIcon.png"><div class="skillItem">JavaScript</div></li>
                     </ul>
-                </div>
-                <div id="subSkills">
-                    <p>I'm experienced working with:</p>
                     <ul class="skillList">
                         <li class="skill"><img src="pictures/SCRUMIcon.jpeg"><div class="skillItem">Agile SCRUM</div></li>
                         <li class="skill"><img src="pictures/JSONIcon.jpeg"><div class="skillItem">JSON Format</div></li>
-                        <li class="skill"><img src="pictures/testingIcon.png"><div class="skillItem">Testing</div></li>
-                        <li class="skill"><img src="pictures/DebuggingIcon.jpeg"><div class="skillItem">Debugging</div></li>
-                        <li class="skill"><img src="pictures/WritingIcon.png"><div class="skillItem">Technical Writing</div></li>
+                        
+                        <li class="skill"><img src="pictures/splunk_logo.png"><div class="skillItem">Splunk</div></li>
+                        <li class="skill"><img src="pictures/aws_logo.jpeg"><div class="skillItem">AWS</div></li>
+                        <li class="skill"><img src="pictures/docker_logo.png"><div class="skillItem">Docker</div></li>
+                        <li class="skill"><img src="pictures/slack_logo.png"><div class="skillItem">Slack</div></li>
+                        <li class="skill"><img src="pictures/outlook_logo.png"><div class="skillItem">Outlook</div></li>
                     </ul>
                 </div>
             </div>
+            
+            
+            
+            
+            
         </div>
         
     
@@ -404,12 +408,28 @@
             </div>
             
             <hr>
+            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
               
         </div>
     </div>
     
-    <div id="footer">
-        <p>Mason Force 2019 v1.0</p>
+    <div id="footer-wrap">
+        <div id="footer">
+            <p>Mason Force 2019 v1.0</p>
+        </div>
+    </div>
+    
+    <div id="sub-footer-wrap">
+        <div id="sub-footer">
+        </div>
     </div>
 </body>
     
