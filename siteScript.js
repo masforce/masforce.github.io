@@ -1,5 +1,231 @@
 $( document ).ready(function() {
     
+    document.onkeydown = checkKey;
+
+    function checkKey(e) {
+        var sprites = Array.from(document.getElementsByClassName("sprite"))
+        e = e || window.event;
+        if (e.keyCode == '32') {
+           shoot(sprites);
+        }
+        else {
+            if (e.keyCode == '38') {
+                moveUp(sprites);
+            }
+            else if (e.keyCode == '40') {
+                moveDown(sprites);
+            }
+            else if (e.keyCode == '37') {
+               moveLeft(sprites);
+            }
+            else if (e.keyCode == '39') {
+               moveRight(sprites);
+            }
+            removeOldSprites(sprites)
+            createNewSprites(newSprites)
+        }
+        
+    }
+    
+    
+    function shoot(sprites) {
+        console.log("shoot!")
+        
+        var origin
+        
+        for (var i = 0; i < sprites.length; i++) {
+            
+            sprite = sprites[i]
+            var shootYCoord
+            
+            if (sprite.style.backgroundColor == "green") {
+                
+                var yCoord = getPosition(sprite).substring(2)
+                var xCoord = getPosition(sprite).substring(0, 2)
+                var newCoord = xCoord + yCoord
+                
+                shootYCoord = parseInt(yCoord)+1
+                origin = xCoord + shootYCoord
+                
+            }
+            
+        }
+
+        var shootSpan = 40 - shootYCoord
+        var position = origin
+        
+        for (var i = 0; i < shootSpan; i++){
+            
+            triggerShoot(position)
+                    
+        }
+        
+    }
+    
+    function triggerShoot(position) {
+        
+        console.log("setting color")
+            document.getElementById("cell" + position).style.backgroundColor = "yellow"
+            
+            setTimeout(function() {
+                //if (document.getElementById(shootCoord).classList.contains("sprite")){
+                    //console.log("position is: " + position)
+                document.getElementById("cell" + position).style.backgroundColor = "#4F4F4F"
+                //}
+                
+                var yCoord = position.substring(2)
+                var xCoord = position.substring(0, 2)
+                position = xCoord + (parseInt(yCoord)+1)
+                
+            }, 300);
+        
+    }
+    
+    //array to store id for all new sprites
+    var newSprites = [];
+    
+    //helper functions to redraw sprite pixels:
+    function removeOldSprites(sprites) {
+        for (var i = 0; i < sprites.length; i++) {
+            sprite = sprites[i]
+            sprite.style.backgroundColor = "#4F4F4F"
+            sprite.classList.remove("sprite")
+        }
+    }
+    function createNewSprites(newSprites) {
+        for (var i = 0; i < newSprites.length; i++) {
+            coords = newSprites[i][0]
+            var newSprite = document.getElementById(coords)
+            //console.log(coords)
+            newSprite.style.backgroundColor = newSprites[i][1]
+            newSprite.className = "sprite"
+        }
+    }
+    
+    function moveUp(sprites) {
+        //loop to populate array of new sprites:
+        for (var i = 0; i < sprites.length; i++) {
+            sprite = sprites[i]
+            var yCoord = getPosition(sprite).substring(2)
+            var xCoord = getPosition(sprite).substring(0, 2)
+
+            if (xCoord != 0) {
+                var newXcoord = parseInt(xCoord)-1
+
+                if (newXcoord.toString().length == 1) {
+                    newXcoord = "0" + newXcoord
+                }
+
+                var newCoord = "cell" + newXcoord + yCoord
+
+                //console.log("New coord is: " + newCoord)
+                
+                newSprites[i] = [newCoord, sprite.style.backgroundColor]
+            }   
+        }
+    }
+      
+    function moveDown(sprites) { 
+        //loop to populate array of new sprites:
+        for (var i = 0; i < sprites.length; i++) {
+            sprite = sprites[i]
+            var yCoord = getPosition(sprite).substring(2)
+            var xCoord = getPosition(sprite).substring(0, 2)
+
+            if (xCoord != 39) {
+                var newXcoord = parseInt(xCoord)+1
+
+                if (newXcoord.toString().length == 1) {
+                    newXcoord = "0" + newXcoord
+                }
+
+                var newCoord = "cell" + newXcoord + yCoord
+
+                //console.log("New coord is: " + newCoord)
+                
+                newSprites[i] = [newCoord, sprite.style.backgroundColor]
+
+            }
+        }
+    }
+    function moveLeft(sprites) {
+        //loop to populate array of new sprites:
+        for (var i = 0; i < sprites.length; i++) {
+            sprite = sprites[i]
+        
+            var yCoord = getPosition(sprite).substring(2)
+            var xCoord = getPosition(sprite).substring(0, 2)
+
+            if (yCoord != 0) {
+                var newYcoord = parseInt(yCoord)-1
+
+                if (newYcoord.toString().length == 1) {
+                    newYcoord = "0" + newYcoord
+                }
+
+                var newCoord = "cell" + xCoord + newYcoord
+
+                //console.log("New coord is: " + newCoord)
+                
+                newSprites[i] = [newCoord, sprite.style.backgroundColor]
+
+            }
+            else {
+                var newCoord = "cell" + xCoord + "39"
+
+                //console.log("New coord is: " + newCoord)
+                
+                newSprites[i] = [newCoord, sprite.style.backgroundColor]
+
+            }
+            var newSprite = document.getElementById(newCoord)
+        }
+    }
+    function moveRight(sprites) {
+        //loop to populate array of new sprites:
+        for (var i = 0; i < sprites.length; i++) {   
+            sprite = sprites[i]
+        
+            var yCoord = getPosition(sprite).substring(2)
+            var xCoord = getPosition(sprite).substring(0, 2)
+
+            if (yCoord != 39) {
+
+                var newYcoord = parseInt(yCoord)+1
+
+                if (newYcoord.toString().length == 1) {
+                    newYcoord = "0" + newYcoord
+                }
+
+                var newCoord = "cell" + xCoord + newYcoord
+
+                //console.log("New coord is: " + newCoord)
+
+                newSprites[i] = [newCoord, sprite.style.backgroundColor]
+
+            }
+            else {
+
+                var newCoord = "cell" + xCoord + "00"
+
+                //console.log("New coord is: " + newCoord)
+
+                newSprites[i] = [newCoord, sprite.style.backgroundColor]
+
+            }
+            var newSprite = document.getElementById(newCoord)
+        }
+    }
+    
+    function getPosition(sprite) {
+        return(sprite.id.substring(4))
+    }
+    
+    
+    
+    
+    
+    
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     if (isMobile) {

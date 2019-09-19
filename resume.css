@@ -639,3 +639,66 @@ table.projectFacts th {
     font-size: 20px;;
     background-color: #00ADB5;
 }
+
+
+
+
+#gameWrapper {
+    margin-top: 10px;
+    padding-top: 10px;
+    background-color: white;
+    height: calc(100vh - 50px);
+}
+
+#tableWrapper {
+    padding-top: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    height: 90%;
+    background-color: white;
+}
+
+#controls {
+    height: 50px;
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#gameTable {
+    border-style: solid;
+    border-width: 2px;
+    border-color: grey;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: seperate;
+    border-spacing: 0em;
+}
+table#gameTable td {
+    background-color: #4F4F4F;
+    width: 15px;
+    height: 15px;
+}
+
+table#gameTable td.sprite {
+    background-color: white;
+    width: 15px;
+    height: 15px;
+}
+
+table#gameTable td.labels {
+    padding: 0;
+    background-color: white;
+    font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
