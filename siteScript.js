@@ -223,9 +223,6 @@ $( document ).ready(function() {
     
     
     
-    
-    
-    
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     if (isMobile) {
@@ -304,8 +301,55 @@ $(document).ready(function(){
 
 
 $( document ).ready(function() {
+    
+//    $(".actColumn").on('click', function(event) {
+//        console.log("testing " + this.id);
+//        
+//        $(".actColumnSelected").addClass('actColumn').removeClass('actColumnSelected');
+//        $(".selectedContent").removeClass('selectedContent').slideToggle();
+//
+//        $("#" + this.id).toggleClass("actColumnSelected");
+//        
+//        var content = $("#" + this.id + "Content");
+//        
+//        content.slideToggle();
+//        content.addClass("selectedContent")
+//        
+//    });
+    
+        $(".actColumn").on('click', function(event) {      
+            console.log(this.id + " was clicked");
+            
+            var content = $("#" + this.id + "Content");
+            
+            if ($("#" + this.id).hasClass("actColumnSelected")) {
+                console.log("element selected was already selected")
+                
+                $("#" + this.id + "Arrow").removeClass("rotated");
+                
+                $("#" + this.id).addClass('actColumn').removeClass('actColumnSelected');
+                $(".selectedContent").removeClass('selectedContent');
+                content.slideToggle();
+                
+            }
+            else {
+                
+                $(".rotated").removeClass('rotated')
+                $("#" + this.id + "Arrow").addClass("rotated");
+                
+                $(".actColumnSelected").addClass('actColumn').removeClass('actColumnSelected');
+                $(".selectedContent").removeClass('selectedContent').slideToggle();
+
+                $("#" + this.id).toggleClass("actColumnSelected");
+
+                content.slideToggle();
+                content.addClass("selectedContent")
+            }
+
+        });
+    
         
-        $('#sponsorCarousel').carousel({interval: 3900});
+        $('#sponsorCarousel').carousel({interval: 4000});
 
         $('.carousel .item').each(function(){
             
