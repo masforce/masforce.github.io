@@ -259,6 +259,16 @@ $( document ).ready(function() {
         document.getElementById('subWrapper1').id = "subWrapper1Condensed"
         document.getElementById('subWrapper2').id = "subWrapper2Condensed"
         document.getElementById('socialMedia').id = "socialMediaCondensed"
+        
+        document.getElementsByClassName('col-md-12')[0].style.display = "none"
+        
+        //$('*').each(function(){
+        //   var k =  parseInt($(this).css('font-size')); 
+        //   var redSize = ((k*120)/100) ; //here, you can give the percentage( now it is reduced to 90%)
+        //       $(this).css('font-size',redSize);  
+
+        //});
+        
     }
     
     function loadWide() {
@@ -268,6 +278,9 @@ $( document ).ready(function() {
         document.getElementById('subWrapper1Condensed').id = "subWrapper1"
         document.getElementById('subWrapper2Condensed').id = "subWrapper2"
         document.getElementById('socialMediaCondensed').id = "socialMedia"
+        
+        document.getElementsByClassName('col-md-12')[0].style.display = "inline"
+        
     }
   
     
@@ -301,21 +314,6 @@ $(document).ready(function(){
 
 
 $( document ).ready(function() {
-    
-//    $(".actColumn").on('click', function(event) {
-//        console.log("testing " + this.id);
-//        
-//        $(".actColumnSelected").addClass('actColumn').removeClass('actColumnSelected');
-//        $(".selectedContent").removeClass('selectedContent').slideToggle();
-//
-//        $("#" + this.id).toggleClass("actColumnSelected");
-//        
-//        var content = $("#" + this.id + "Content");
-//        
-//        content.slideToggle();
-//        content.addClass("selectedContent")
-//        
-//    });
     
         $(".actColumn").on('click', function(event) {      
             console.log(this.id + " was clicked");
@@ -373,39 +371,54 @@ $( document ).ready(function() {
 
         $(window).scroll(function() {
             
-           var tophT = $('#top').offset().top,
-               tophH = $('#top').outerHeight(),
+            var tophT = $('#top').offset().top,
+                tophH = $('#top').outerHeight(),
                
-               activitieshT = $('#projects').offset().top,
-               activitieshH = $('#projects').outerHeight(),
+                experiencehT = $('#experience').offset().top,
+                experiencehH = $('#experience').outerHeight(),
                
-               experiencehT = $('#experience').offset().top,
-               experiencehH = $('#experience').outerHeight(),
+                activitieshT = $('#activities').offset().top,
+                activitieshH = $('#activities').outerHeight(),
                
-               wH = $(window).height(),
-               wS = $(this).scrollTop();
+                projectshT = $('#projects').offset().top,
+                projectshH = $('#projects').outerHeight(),
+               
+               
+                wH = $(window).height(),
+                wS = $(this).scrollTop();
             
             
-           if (wS == 0){
+            if (wS == 0){
                
-            $('a[href="#experience"]').css("background-color", "#00ADB5");
-            $('a[href="#top"]').css("background-color", "grey");
-            $('a[href="#projects"]').css("background-color", "#00ADB5");
-           }
+                $('a[href="#experience"]').css("background-color", "#00ADB5");
+                $('a[href="#top"]').css("background-color", "grey");
+                $('a[href="#activities"]').css("background-color", "#00ADB5");
+                $('a[href="#projects"]').css("background-color", "#00ADB5");
+            }
             
-           else if (wS > (activitieshT+activitieshH-(wH/2))){
+            if (wS > (experiencehT+experiencehH-(wH/2))){
                
-            $('a[href="#experience"]').css("background-color", "#00ADB5");
-            $('a[href="#top"]').css("background-color", "#00ADB5");
-            $('a[href="#projects"]').css("background-color", "grey");
-           }
+                $('a[href="#experience"]').css("background-color", "grey");
+                $('a[href="#top"]').css("background-color", "#00ADB5");
+                $('a[href="#activities"]').css("background-color", "#00ADB5");
+                $('a[href="#projects"]').css("background-color", "#00ADB5");
+            }
             
-           else if (wS > (experiencehT+experiencehH-(wH/2))){
+            if (wS > (activitieshT+activitieshH-(wH/2))){
                
-            $('a[href="#experience"]').css("background-color", "grey");
-            $('a[href="#top"]').css("background-color", "#00ADB5");
-            $('a[href="#projects"]').css("background-color", "#00ADB5");
-           }
+                $('a[href="#experience"]').css("background-color", "#00ADB5");
+                $('a[href="#top"]').css("background-color", "#00ADB5");
+                $('a[href="#activities"]').css("background-color", "grey");
+                $('a[href="#projects"]').css("background-color", "#00ADB5");
+            }
+            
+            if (wS > (projectshT+projectshH-(wH/2))){
+               
+                $('a[href="#experience"]').css("background-color", "#00ADB5");
+                $('a[href="#top"]').css("background-color", "#00ADB5");
+                $('a[href="#activities"]').css("background-color", "#00ADB5");
+                $('a[href="#projects"]').css("background-color", "grey");
+            }
 
         });    
 

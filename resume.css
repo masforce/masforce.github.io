@@ -79,7 +79,7 @@ body {
     margin: 0;
     padding: 0;
 }
-.navbar-brand {
+.navbar-brandOld {
     height:200px;
     width: 340px;
     background-color: #9c9c9c;
@@ -89,7 +89,7 @@ body {
     position: fixed;
     top: -105px;
     right: 0;
-    z-index: 1;
+    z-index: 9999 !important;
     
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
@@ -97,11 +97,29 @@ body {
     -webkit-transition: transform 1s ease-in-out;
     -moz-transition: transform 1s ease-in-out;
     transition: transform 1s ease-in-out;
-    
-    
-    
+
 }
 
+.navbar-brand {
+    height:200px !important;
+    width: 340px !important;
+    background-color: grey !important;
+    margin-right: 30px !important;
+    color: white !important;
+    font-size: 38px !important;
+    position: fixed !important;
+    top: -105px !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+
+    -webkit-transition: transform 1s ease-in-out;
+    -moz-transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
+
+}
 #navbar-brand-wrap {
     filter: drop-shadow(0px 0px 7px);
 }
@@ -125,7 +143,7 @@ body {
     background-color: #9c9c9c !important;
 }
 .navbar-brand:hover {
-    background-color: #9c9c9c !important;
+    background-color: grey !important;
 
     -moz-transform: translateY(30px);
     -webkit-transform: translateY(30px);
@@ -593,7 +611,7 @@ h4 {
 
 /* _____________________________________________________________________________________________ */
 
-.wrapper3 {
+#wrapper3 {
     width: 90%;
     margin-top: 40px;
     margin-left: auto;
@@ -601,6 +619,16 @@ h4 {
     margin-bottom: 60px;
     display: flex;
 }
+
+#projectsWrapper {
+    width: 90%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    display: flex;
+}
+
 #wrapper3Condensed {
   width: 90%;
   margin-top: 40px;
