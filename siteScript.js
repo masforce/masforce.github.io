@@ -316,12 +316,10 @@ $(document).ready(function(){
 $( document ).ready(function() {
     
         $(".actColumn").on('click', function(event) {      
-            console.log(this.id + " was clicked");
-            
+
             var content = $("#" + this.id + "Content");
             
             if ($("#" + this.id).hasClass("actColumnSelected")) {
-                console.log("element selected was already selected")
                 
                 $("#" + this.id + "Arrow").removeClass("rotated");
                 
@@ -342,6 +340,25 @@ $( document ).ready(function() {
 
                 content.slideToggle();
                 content.addClass("selectedContent")
+            }
+
+        });
+    
+    
+        $(".moreInfo").on('click', function(event) {      
+            
+            var content = $("#" + this.id + "Description");
+            
+            if ($("#" + this.id).hasClass("selectedDescription")) {
+                $("#" + this.id + "Arrow").removeClass("rotatedInfo");
+                $(this).removeClass('selectedDescription');
+                content.slideToggle();
+            }
+            else {
+                $("#" + this.id  + "Arrow").addClass("rotatedInfo");
+                $("#" + this.id).toggleClass("selectedDescription");
+                content.slideToggle();
+                content.addClass("selectedDescription")
             }
 
         });
