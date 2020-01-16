@@ -64,7 +64,7 @@ $( document ).ready(function() {
     
     function triggerShoot(position) {
         
-        console.log("setting color")
+        console.log("setting color" + position)
             document.getElementById("cell" + position).style.backgroundColor = "yellow"
             
             setTimeout(function() {
