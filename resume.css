@@ -284,9 +284,6 @@ h1 {
     
 
 
-
-    
-    
     
 #introBox img.profile {
     border-radius: 50%;
@@ -335,9 +332,6 @@ h1 {
     transform: scale(1.2);
 }
 
-
-
-
 #columns {
     display: flex;
     padding: 10px;
@@ -347,7 +341,7 @@ h1 {
     display: block;
     padding: 10px;
     background-color: #ffff;
-    font-size: 25px;
+    font-size: 30px;
 }
 #about {
     padding: 10px;
@@ -710,6 +704,7 @@ h4 {
     background-color: #ffff;
     padding: 20px;
     margin-bottom: 40px;
+    font-size: 25px;
 }
 
 
