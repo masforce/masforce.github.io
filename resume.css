@@ -335,16 +335,31 @@ h1 {
     transform: scale(1.2);
 }
 
+
+
+
 #columns {
     display: flex;
     padding: 10px;
     background-color: #ffff;
 }
+#columnsCondensed {
+    display: block;
+    padding: 10px;
+    background-color: #ffff;
+    font-size: 25px;
+}
 #about {
     padding: 10px;
     width: 65%;
 }
-
+#aboutCondensed {
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-bottom: 30px;
+}
 #about p {
     font-size: 20px;
 }
@@ -352,9 +367,11 @@ h1 {
     padding: 10px;
     width: 34%;
 }
-
-table {
-
+#factsCondensed {
+    padding: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 table.facts, td, th {

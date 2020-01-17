@@ -260,6 +260,10 @@ $( document ).ready(function() {
         document.getElementById('subWrapper2').id = "subWrapper2Condensed"
         document.getElementById('socialMedia').id = "socialMediaCondensed"
         
+        document.getElementById('columns').id = "columnsCondensed"
+        document.getElementById('about').id = "aboutCondensed"
+        document.getElementById('facts').id = "factsCondensed"
+        
         document.getElementsByClassName('col-md-12')[0].style.display = "none"
         
         //$('*').each(function(){
@@ -278,6 +282,10 @@ $( document ).ready(function() {
         document.getElementById('subWrapper1Condensed').id = "subWrapper1"
         document.getElementById('subWrapper2Condensed').id = "subWrapper2"
         document.getElementById('socialMediaCondensed').id = "socialMedia"
+        
+        document.getElementById('columnsCondensed').id = "columns"
+        document.getElementById('aboutCondensed').id = "about"
+        document.getElementById('factsCondensed').id = "facts"
         
         document.getElementsByClassName('col-md-12')[0].style.display = "inline"
         
