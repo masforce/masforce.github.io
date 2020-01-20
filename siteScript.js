@@ -264,6 +264,8 @@ $( document ).ready(function() {
         document.getElementById('about').id = "aboutCondensed"
         document.getElementById('facts').id = "factsCondensed"
         
+        document.getElementById('introBox').id = "introBoxCondensed"
+        
         document.getElementsByClassName('col-md-12')[0].style.display = "none"
         
         //$('*').each(function(){
@@ -286,6 +288,8 @@ $( document ).ready(function() {
         document.getElementById('columnsCondensed').id = "columns"
         document.getElementById('aboutCondensed').id = "about"
         document.getElementById('factsCondensed').id = "facts"
+        
+        document.getElementById('introBoxCondensed').id = "introBox"
         
         document.getElementsByClassName('col-md-12')[0].style.display = "inline"
         
