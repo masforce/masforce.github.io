@@ -841,25 +841,50 @@ h4 {
 }
 
 
-
-
-
-
-
-
-
 .myAnchor {
     position: relative;
 }
 
 
 
-.project {
+.projectIntroBox {
     width: 100%;
     display: flex;
 }
+.projectIntroBoxCondensed {
+    width: 100%;
+    display: block;
+}
+
+
+.projectImgCol {
+    width: 60%;
+}
+.projectImgColCondensed {
+    width: 100%;
+}
+
+.projectTableCol {
+    padding-top: 20px;
+    width: 40%;
+}
+.projectTableColCondensed {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.subProjectTableCol {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.project {
+    width: 100%;
+    display: block;
+}
 .projectImg {
-    width: 50%;
+    width: 100%;
     padding: 20px;
 }
 .projectImg img {
@@ -867,10 +892,7 @@ h4 {
     box-shadow: 0px 0px 3px;
     transition: all ease-in-out .3s;
 }
-.projectImg a {
-    margin: 0;
-    padding: 0
-}
+
 .projectImg img:hover {
     transform: scale(1.05);
 
@@ -887,12 +909,14 @@ h4 {
     width: 50%;
     padding: 20px;
 }
-.projectTable .projectTitle {
+.projectTitle {
+
     text-align: center;
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 10px;
-    text-decoration: underline;
+    
+    clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
 }
 #projectFacts {
     padding: 10px;
@@ -920,7 +944,7 @@ table.projectFacts th {
 }
 
 
-
+/*-------GAME------------------------------------*/
 
 #gameWrapper {
     margin-top: 10px;

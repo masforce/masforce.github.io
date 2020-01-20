@@ -266,6 +266,22 @@ $( document ).ready(function() {
         
         document.getElementById('introBox').id = "introBoxCondensed"
         
+        //project section
+        introBoxes = document.getElementsByClassName('projectIntroBox')
+        while (introBoxes.length > 0) {
+            introBoxes[0].className = 'projectIntroBoxCondensed'
+        }
+        
+        imgCols = document.getElementsByClassName('projectImgCol')
+        while (imgCols.length > 0) {
+            imgCols[0].className = 'projectImgColCondensed'
+        }
+        
+        tableCols = document.getElementsByClassName('projectTableCol')
+        while (tableCols.length > 0) {
+            tableCols[0].className = 'projectTableColCondensed'
+        }      
+        
         document.getElementsByClassName('col-md-12')[0].style.display = "none"
         
         //$('*').each(function(){
@@ -290,6 +306,22 @@ $( document ).ready(function() {
         document.getElementById('factsCondensed').id = "facts"
         
         document.getElementById('introBoxCondensed').id = "introBox"
+        
+        //project section
+        introBoxesCondensed = document.getElementsByClassName('projectIntroBoxCondensed')
+        while (introBoxesCondensed.length > 0) {
+            introBoxesCondensed[0].className = 'projectIntroBox'
+        }
+        
+        imgColsCondensed = document.getElementsByClassName('projectImgColCondensed')
+        while (imgColsCondensed.length > 0) {
+            imgColsCondensed[0].className = 'projectImgCol'
+        }
+
+        tableColsCondensed = document.getElementsByClassName('projectTableColCondensed')
+        while (tableColsCondensed.length > 0) {
+            tableColsCondensed[0].className = 'projectTableCol'
+        }
         
         document.getElementsByClassName('col-md-12')[0].style.display = "inline"
         
